@@ -14,7 +14,7 @@ models:
     mpk: "06002d4871dbd882fc8b4c385e5181fdd85615e514f4efca3b6b3a3a774a36d2_39785426944_58b5d994-b471-58c9-8058-d224be115e1a"
 
 containers:
-  - name: "llama3-3-70b-fp8"
+  - name: "llama3-3-70b-fp8-tp4"
     image: ""
     args: [
       "--runtime", "nvidia",
@@ -28,7 +28,7 @@ containers:
       "--served-model-name", "llama3-3-70b-fp8-tp4",
       "--port", "8001"
     ]
-  - name: "llama3-3-70b-fp8"
+  - name: "llama3-3-70b-fp8-tp2"
     image: ""
     args: [
       "--runtime", "nvidia",
