@@ -67,7 +67,6 @@ shim:
   upstream-port: 8087
   publish-attestation: false
   tls-challenge: dns
-  tls-mode: self-signed  
   paths:
     - /v1/chat/completions
     - /metrics
