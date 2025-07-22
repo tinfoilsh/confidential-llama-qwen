@@ -23,15 +23,11 @@ containers:
       "--runtime", "nvidia",
       "--gpus", "'\"device=0,1,2,3\"'",
       "--ipc", "host",
-      "-v", "/etc/tinfoil/templates/tool_chat_template_llama3.1_json.jinja:/tool_chat_template_llama3.1_json.jinja:ro",
       "vllm/vllm-openai:v0.9.2",
       "--model", "/tinfoil/mpk/mpk-0d0be05062e4d3fadc17176cffd1ef6b518a02b0410bd897723f423074ec6cb5",
       "--tensor-parallel-size", "4",
       "--served-model-name", "llama3-3-70b-turbo",
-      "--port", "8001",
-      "--enable-auto-tool-choice",
-      "--tool-call-parser", "llama3_json",
-      "--chat-template", "/tool_chat_template_llama3.1_json.jinja"
+      "--port", "8001"
     ]
   - name: "qwen2-5-72b-int4-tp2"
     image: ""
@@ -43,9 +39,7 @@ containers:
       "--model", "/tinfoil/mpk/mpk-ddd9eec6024430f459b9e5e24591a995329e26cf63cfc7c3465fce17b081ba58",
       "--tensor-parallel-size", "2",
       "--served-model-name", "qwen2-5-72b-turbo",
-      "--port", "8002",
-      "--enable-auto-tool-choice",
-      "--tool-call-parser", "hermes"
+      "--port", "8002"
     ]
   - name: "mistral3-1-24b-tp2"
     image: ""
@@ -53,15 +47,11 @@ containers:
       "--runtime", "nvidia",
       "--gpus", "'\"device=6,7\"'",
       "--ipc", "host",
-      "-v", "/etc/tinfoil/templates/tool_chat_template_mistral3.jinja:/tool_chat_template_mistral3.jinja:ro",
       "vllm/vllm-openai:v0.9.2",
       "--model", "/tinfoil/mpk/mpk-23cd0af7cb8f25d98be62011728497ffddcbefca748fe273c36bb823fd7bf95f",
       "--tensor-parallel-size", "2",
       "--served-model-name", "mistral-small-3-1-24b-turbo",
       "--port", "8003",
-      "--enable-auto-tool-choice",
-      "--tool-call-parser", "mistral",
-      "--chat-template", "/tool_chat_template_mistral3.jinja",
       "--gpu-memory-utilization", "0.95",
       "--limit_mm_per_prompt", "image=10"
     ]
