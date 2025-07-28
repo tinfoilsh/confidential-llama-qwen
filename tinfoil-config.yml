@@ -26,7 +26,7 @@ containers:
       "vllm/vllm-openai:v0.9.2",
       "--model", "/tinfoil/mpk/mpk-0d0be05062e4d3fadc17176cffd1ef6b518a02b0410bd897723f423074ec6cb5",
       "--tensor-parallel-size", "4",
-      "--served-model-name", "llama3-3-70b-turbo",
+      "--served-model-name", "llama3-3-70b",
       "--port", "8001"
     ]
   - name: "qwen2-5-72b-int4-tp2"
@@ -59,7 +59,7 @@ containers:
     image: ""
     args: [
       "ghcr.io/tinfoilsh/model-router:0.0.1",
-      "/app/bin", "-m", "llama3-3-70b-turbo_8001,qwen2-5-72b-turbo_8002,mistral-small-3-1-24b-turbo_8003",
+      "/app/bin", "-m", "llama3-3-70b_8001,qwen2-5-72b-turbo_8002,mistral-small-3-1-24b-turbo_8003",
     ]
 
 shim:
