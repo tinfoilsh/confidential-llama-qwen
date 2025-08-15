@@ -36,7 +36,7 @@ containers:
       "--model", "/tinfoil/mpk/mpk-bc59459fc1a03ec26049d01854bbb095313f30f4070138a02b33ee653f3bee28",
       "--tensor-parallel-size", "4",
       "--gpu-memory-utilization", "0.95",
-      "--max-model-len", "128000",
+      "--max-model-len", "32768",
       "--enable-auto-tool-choice",
       "--tool-call-parser", "qwen3_coder",
       "--served-model-name", "qwen3-coder-480b",
