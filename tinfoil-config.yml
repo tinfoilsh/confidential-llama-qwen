@@ -24,6 +24,9 @@ containers:
       "--model", "/tinfoil/mpk/mpk-0d0be05062e4d3fadc17176cffd1ef6b518a02b0410bd897723f423074ec6cb5",
       "--tensor-parallel-size", "4",
       "--served-model-name", "llama3-3-70b",
+      "--enable-auto-tool-choice",
+      "--tool-call-parser", "llama3_json",
+      "--chat-template", "examples/tool_chat_template_llama3.2_json.jinja",
       "--port", "8001"
     ]
   - name: "qwen3-coder-480b-tp4"
@@ -39,6 +42,7 @@ containers:
       "--max-model-len", "131072",
       "--enable-auto-tool-choice",
       "--tool-call-parser", "qwen3_coder",
+      "--chat-template", "examples/tool_chat_template_qwen3coder.jinja",
       "--served-model-name", "qwen3-coder-480b",
       "--port", "8002"
     ]
