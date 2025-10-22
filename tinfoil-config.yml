@@ -1,5 +1,5 @@
-shim-version: v0.1.9@sha256:410510c9e8e4c7489dd201fede302dee8455075ca28f4f0abbf84bded943b8f1
-cvm-version: 0.4.1
+shim-version: v0.2.10@sha256:f9040a48106ab06c290fd9b225d4dd53a2daad715c9107594d4310b21592039f
+cvm-version: 0.4.10
 cpus: 32
 memory: 524288
 gpus: full
