@@ -1,9 +1,8 @@
-shim-version: v0.2.10@sha256:f9040a48106ab06c290fd9b225d4dd53a2daad715c9107594d4310b21592039f
-cvm-version: 0.4.15
+shim-version: v0.2.15@sha256:5ca748b384b78b7e686b57ca66d9b3c552038ebab2ce60305004f76e573a8458
+cvm-version: 0.5.8
 cpus: 32
 memory: 524288
 gpus: full
-vllm: false
 
 models:
   - name: "llama3-3-70b-fp8"
@@ -20,7 +19,7 @@ containers:
       "--runtime", "nvidia",
       "--gpus", "'\"device=0,1,2,3\"'",
       "--ipc", "host",
-      "vllm/vllm-openai:v0.10.2",
+      "vllm/vllm-openai:v0.12.0@sha256:6766ce0c459e24b76f3e9ba14ffc0442131ef4248c904efdcbf0d89e38be01fe",
       "--model", "/tinfoil/mpk/mpk-0d0be05062e4d3fadc17176cffd1ef6b518a02b0410bd897723f423074ec6cb5",
       "--tensor-parallel-size", "4",
       "--served-model-name", "llama3-3-70b",
@@ -35,7 +34,7 @@ containers:
       "--runtime", "nvidia",
       "--gpus", "'\"device=4,5,6,7\"'",
       "--ipc", "host",
-      "vllm/vllm-openai:v0.10.2",
+      "vllm/vllm-openai:v0.12.0@sha256:6766ce0c459e24b76f3e9ba14ffc0442131ef4248c904efdcbf0d89e38be01fe",
       "--model", "/tinfoil/mpk/mpk-81993809d5510f60b216a144a27d4a2ca1df6b5ddaa6b7f0096a040bb5b1bf07",
       "--tensor-parallel-size", "4",
       "--gpu-memory-utilization", "0.95",
